@@ -22,6 +22,8 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
+      - name: Install
+        run: pnpm install
       - name: Lint
         run: pnpm lint
       - name: Prettier
