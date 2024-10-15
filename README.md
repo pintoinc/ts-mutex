@@ -11,7 +11,7 @@ import { Mutex } from '@livekit/mutex';
 
 const myLock = new Mutex();
 
-const unlock = await myLock.unlock();
+const unlock = await myLock.lock();
 
 try {
     ...
