@@ -2,6 +2,7 @@
   "name": "@livekit/mutex",
   "private": false,
   "access": "public",
+  "license": "Apache-2.0",
   "version": "1.0.0",
   "description": "Tiny mutex helper",
   "repository": "git@github.com:livekit/ts-mutex.git",
