@@ -1,0 +1,38 @@
+{
+  "name": "@livekit/mutex",
+  "private": false,
+  "access": "public",
+  "version": "1.0.0",
+  "description": "Tiny mutex helper",
+  "repository": "git@github.com:livekit/ts-mutex.git",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "dist/index.d.ts",
+  "sideEffects": false,
+  "type": "module",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest --environment node run",
+    "test:browser": "vitest --environment happy-dom run",
+    "test:edge": "vitest --environment edge-runtime run"
+  },
+  "devDependencies": {
+    "@edge-runtime/vm": "^4.0.3",
+    "happy-dom": "^15.7.4",
+    "typescript": "~5.0.0",
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.2.4",
+    "vitest": "^2.1.3"
+  }
+}
