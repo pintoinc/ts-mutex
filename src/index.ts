@@ -22,7 +22,7 @@ export class Mutex {
         (unlockNext = () => {
           this._locks -= 1;
           resolve();
-        })
+        }),
     );
 
     const willUnlock = this._locking.then(() => unlockNext);

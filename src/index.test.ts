@@ -1,13 +1,13 @@
-import { describe, expect, it } from "vitest";
-import { Mutex } from "./index";
+import { describe, expect, it } from 'vitest';
+import { Mutex } from './index';
 
-describe("Mutex", () => {
-  it("should not be locked initially", () => {
+describe('Mutex', () => {
+  it('should not be locked initially', () => {
     const mutex = new Mutex();
     expect(mutex.isLocked()).toBe(false);
   });
 
-  it("should lock and unlock correctly", async () => {
+  it('should lock and unlock correctly', async () => {
     const mutex = new Mutex();
     const unlock = await mutex.lock();
     expect(mutex.isLocked()).toBe(true);
@@ -15,7 +15,7 @@ describe("Mutex", () => {
     expect(mutex.isLocked()).toBe(false);
   });
 
-  it("should handle multiple locks", async () => {
+  it('should handle multiple locks', async () => {
     const mutex = new Mutex();
     const unlock1 = await mutex.lock();
     const unlock2Promise = mutex.lock();
@@ -30,7 +30,7 @@ describe("Mutex", () => {
     expect(mutex.isLocked()).toBe(false);
   });
 
-  it("should not care about unlocking the same lock twice", async () => {
+  it('should not care about unlocking the same lock twice', async () => {
     const mutex = new Mutex();
     const unlock1 = await mutex.lock();
     expect(mutex.isLocked()).toBe(true);
